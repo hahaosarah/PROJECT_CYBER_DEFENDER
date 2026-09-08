@@ -31,14 +31,12 @@ public: \
 
 
 #define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberGameMode_h_10_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACyberGameMode(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACyberGameMode(ACyberGameMode&&) = delete; \
 	ACyberGameMode(const ACyberGameMode&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACyberGameMode); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACyberGameMode); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACyberGameMode) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACyberGameMode) \
 	NO_API virtual ~ACyberGameMode();
 
 

@@ -16,10 +16,21 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+struct FInputActionValue;
+
 // ********** Begin Class ACyberCharacter **********************************************************
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execStopSprint); \
+	DECLARE_FUNCTION(execStartSprint); \
+	DECLARE_FUNCTION(execLook); \
+	DECLARE_FUNCTION(execStopJump); \
+	DECLARE_FUNCTION(execStartJump); \
+	DECLARE_FUNCTION(execMove);
+
+
 CYBERDEFENDER_API UClass* Z_Construct_UClass_ACyberCharacter_NoRegister();
 
-#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesACyberCharacter(); \
 	friend struct Z_Construct_UClass_ACyberCharacter_Statics; \
@@ -30,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(ACyberCharacter)
 
 
-#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACyberCharacter(ACyberCharacter&&) = delete; \
 	ACyberCharacter(const ACyberCharacter&) = delete; \
@@ -40,12 +51,13 @@ public: \
 	NO_API virtual ~ACyberCharacter();
 
 
-#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_9_PROLOG
-#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_12_GENERATED_BODY \
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_11_PROLOG
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_12_INCLASS_NO_PURE_DECLS \
-	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_12_ENHANCED_CONSTRUCTORS \
+	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_INCLASS_NO_PURE_DECLS \
+	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberCharacter_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

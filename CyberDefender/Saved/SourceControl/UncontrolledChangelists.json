@@ -7,7 +7,13 @@
 			"files": [
 				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Maps/MainLevel.umap",
 				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberGameMode.uasset",
-				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberCharacter.uasset"
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberCharacter.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Inputs/IA_Move.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberPlayerController.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Inputs/IA_Jump.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Inputs/IA_Look.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Inputs/IA_Sprint.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Inputs/IMC_Character.uasset"
 			]
 		}
 	]

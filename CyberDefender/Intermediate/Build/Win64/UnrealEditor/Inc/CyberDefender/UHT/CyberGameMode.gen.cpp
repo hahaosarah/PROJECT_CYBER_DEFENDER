@@ -95,7 +95,6 @@ UClass* Z_Construct_UClass_ACyberGameMode()
 	}
 	return Z_Registration_Info_UClass_ACyberGameMode.OuterSingleton;
 }
-ACyberGameMode::ACyberGameMode(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(ACyberGameMode);
 ACyberGameMode::~ACyberGameMode() {}
 // ********** End Class ACyberGameMode *************************************************************

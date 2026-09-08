@@ -9,4 +9,6 @@ class CYBERDEFENDER_API ACyberGameMode : public AGameMode
 {
 	GENERATED_BODY()
 	
+public:
+	ACyberGameMode();
 };
