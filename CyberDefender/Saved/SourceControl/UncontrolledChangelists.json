@@ -1,0 +1,14 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Maps/MainLevel.umap",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberGameMode.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberCharacter.uasset"
+			]
+		}
+	]
+}

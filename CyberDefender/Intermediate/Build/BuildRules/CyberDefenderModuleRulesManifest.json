@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\git\\PROJECT_CYBER_DEFENDER\\CyberDefender\\Source\\CyberDefender\\CyberDefender.Build.cs",
+		"C:\\git\\PROJECT_CYBER_DEFENDER\\CyberDefender\\Source\\CyberDefender.Target.cs",
+		"C:\\git\\PROJECT_CYBER_DEFENDER\\CyberDefender\\Source\\CyberDefenderEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

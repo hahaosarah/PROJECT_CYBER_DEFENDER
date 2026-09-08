@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project_cyber_defender\\cyberdefender\\intermediate\\build\\win64\\unrealeditor\\inc\\cyberdefender\\uht\\cybergamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project_cyber_defender\\cyberdefender\\intermediate\\build\\win64\\x64\\cyberdefendereditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project_cyber_defender\\cyberdefender\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\cyberdefender\\definitions.cyberdefender.h",
+            "c:\\git\\project_cyber_defender\\cyberdefender\\source\\cyberdefender\\public\\cybergamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemode.generated.h",
+            "c:\\git\\project_cyber_defender\\cyberdefender\\intermediate\\build\\win64\\unrealeditor\\inc\\cyberdefender\\uht\\cybergamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "CyberDefender",
+			"Path": "..\\Source\\CyberDefender.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "CyberDefenderEditor",
+			"Path": "..\\Source\\CyberDefenderEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
