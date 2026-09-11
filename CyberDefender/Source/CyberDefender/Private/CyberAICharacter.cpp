@@ -1,34 +1,47 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+﻿#include "CyberAICharacter.h"
+#include "CyberAIController.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
-
-#include "CyberAICharacter.h"
-
-// Sets default values
 ACyberAICharacter::ACyberAICharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	AIControllerClass = ACyberAIController::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 
+	UCharacterMovementComponent* Movement = GetCharacterMovement();
+
+	Movement->MaxWalkSpeed = WalkSpeed;
+	Movement->bOrientRotationToMovement = true; // Character가 이동하는 방향으로 회전하도록 설정
+	Movement->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // Character의 회전 속도 설정
 }
 
-// Called when the game starts or when spawned
+void ACyberAICharacter::SetMovementSpeed(float NewSpeed)
+{
+	if (UCharacterMovementComponent* Movement = GetCharacterMovement())
+	{
+		Movement->MaxWalkSpeed = NewSpeed;
+		if (RobotType == ERobotType::Humanoid)
+		{
+			Movement->MaxWalkSpeed = WalkSpeed * 1;
+		}
+		else if (RobotType == ERobotType::DogRobot)
+		{
+			Movement->MaxWalkSpeed = WalkSpeed * 2;
+		}
+		else if (RobotType == ERobotType::Drone)
+		{
+			Movement->MaxWalkSpeed = WalkSpeed * 3;
+		}
+		else if (RobotType == ERobotType::CyberHacker)
+		{
+			Movement->MaxWalkSpeed = WalkSpeed * 4;
+		}
+	}
+}
+
 void ACyberAICharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	SetMovementSpeed(100);
+
+	UE_LOG(LogTemp, Warning, TEXT("[Sparta] AI character has been spawned."));
 }
-
-// Called every frame
-void ACyberAICharacter::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
-
-}
-
-// Called to bind functionality to input
-void ACyberAICharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-}
-

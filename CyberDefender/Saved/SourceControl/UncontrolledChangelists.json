@@ -19,7 +19,10 @@
 				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/ParagonWraith/Characters/Heroes/Wraith/Animations/Blendspaces/JogFwdSlopeLean.uasset",
 				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/ParagonWraith/Characters/Heroes/Wraith/Animations/Locomotion_Combat/Jump_Start_Combat.uasset",
 				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/ParagonWraith/Characters/Heroes/Wraith/Animations/Locomotion_Combat/Jump_Land_Combat.uasset",
-				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberAICharacter.uasset"
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberAICharacter.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/AI/BT_CyberAI.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/AI/BB_CyberAI.uasset",
+				"C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Content/Blueprints/BP_CyberAIController.uasset"
 			]
 		}
 	]

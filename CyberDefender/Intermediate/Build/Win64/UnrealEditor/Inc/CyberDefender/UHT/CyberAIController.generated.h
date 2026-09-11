@@ -16,7 +16,14 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class AActor;
+struct FAIStimulus;
+
 // ********** Begin Class ACyberAIController *******************************************************
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execOnPerceptionUpdated);
+
+
 CYBERDEFENDER_API UClass* Z_Construct_UClass_ACyberAIController_NoRegister();
 
 #define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_INCLASS_NO_PURE_DECLS \
@@ -31,14 +38,12 @@ public: \
 
 
 #define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ACyberAIController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	ACyberAIController(ACyberAIController&&) = delete; \
 	ACyberAIController(const ACyberAIController&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ACyberAIController); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACyberAIController); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ACyberAIController) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ACyberAIController) \
 	NO_API virtual ~ACyberAIController();
 
 
@@ -46,6 +51,7 @@ public: \
 #define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_INCLASS_NO_PURE_DECLS \
 	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAIController_h_15_ENHANCED_CONSTRUCTORS \
 private: \
