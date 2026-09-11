@@ -40,25 +40,7 @@ void ACyberAIController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-
 	StartBehaviorTree();
-
-	UBlackboardComponent* BlackboardComp = GetBlackboardComponent();
-
-	if (BlackboardComp)
-	{
-		BlackboardComp->SetValueAsVector(TEXT("PlayerVector"), PlayerPawn->GetActorLocation());
-	}
-
-	
-
-	/*if (AIPerception)
-	{
-		AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ACyberAIController::OnPerceptionUpdated);
-	}*/
-	
-	/*GetWorldTimerManager().SetTimer(RandomMoveTimer, this, &ACyberAIController::MoveToRandomLocation, 3.0f, true, 1.0f );*/
 }
 
 void ACyberAIController::OnPossess(APawn* InPawn)

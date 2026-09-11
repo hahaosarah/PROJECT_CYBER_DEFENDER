@@ -2,11 +2,12 @@
 	"RemapUnityFiles": 
 	{
 		"Module.CyberDefender.gen.cpp.obj": [
+			"CyberAICharacter.gen.cpp.obj",
+			"CyberAIController.gen.cpp.obj",
 			"CyberCharacter.gen.cpp.obj",
 			"CyberGameMode.gen.cpp.obj",
 			"CyberPlayerController.gen.cpp.obj",
-			"CyberAICharacter.gen.cpp.obj",
-			"CyberAIController.gen.cpp.obj",
+			"BTTask_FindPlayer.gen.cpp.obj",
 			"CyberDefender.init.gen.cpp.obj"
 		]
 	}

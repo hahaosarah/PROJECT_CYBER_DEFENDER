@@ -1,3 +1,6 @@
-2026/09/11-18:14:36.098 85b8 Reusing MANIFEST C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
-2026/09/11-18:14:36.098 85b8 Recovering log #3
-2026/09/11-18:14:36.099 85b8 Reusing old log C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Saved/webcache_4430\Local Storage\leveldb/000003.log 
+2026/09/11-18:16:47.349 94f0 Reusing MANIFEST C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Saved/webcache_4430\Local Storage\leveldb/MANIFEST-000001
+2026/09/11-18:16:47.350 94f0 Recovering log #3
+2026/09/11-18:16:47.350 94f0 Reusing old log C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Saved/webcache_4430\Local Storage\leveldb/000003.log 
+2026/09/11-18:21:54.884 4eb0 Level-0 table #5: started
+2026/09/11-18:21:54.888 4eb0 Level-0 table #5: 75742 bytes OK
+2026/09/11-18:21:54.891 4eb0 Delete type=0 #3
