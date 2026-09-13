@@ -262,6 +262,9 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\CyberDefender\CyberDefender.h"/>
+    <ClCompile Include="..\..\Source\CyberDefender\Private\BTService_CombatState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\CyberDefender\Private\BTTask_FindPlayer.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -280,6 +283,7 @@
     <ClCompile Include="..\..\Source\CyberDefender\Private\CyberPlayerController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClInclude Include="..\..\Source\CyberDefender\Public\BTService_CombatState.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\BTTask_FindPlayer.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberAICharacter.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberAIController.h"/>

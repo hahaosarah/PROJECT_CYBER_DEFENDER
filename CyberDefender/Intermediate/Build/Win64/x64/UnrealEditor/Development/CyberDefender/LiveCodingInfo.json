@@ -7,6 +7,7 @@
 			"CyberCharacter.gen.cpp.obj",
 			"CyberGameMode.gen.cpp.obj",
 			"CyberPlayerController.gen.cpp.obj",
+			"BTService_CombatState.gen.cpp.obj",
 			"BTTask_FindPlayer.gen.cpp.obj",
 			"CyberDefender.init.gen.cpp.obj"
 		]
