@@ -16,20 +16,28 @@ class CYBERDEFENDER_API ACyberCharacter : public ACharacter
 public:
 	ACyberCharacter();
 
-protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	USpringArmComponent* SpringArmComp;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 	UCameraComponent* CameraComp;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float NormalSpeed; // 기본 걷기 속도
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float SprintSpeedMultiplier; // 몇 배 빠르게 달릴지 결정하는 배수
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	float SprintSpeed; // 실제 스트린트 속도
+	UFUNCTION(BlueprintPure, Category = "Health")
+	float GetHealth() const;
+	UFUNCTION(BlueprintCallable, Category = "Health")
+	void AddHealth(float Amount);
+
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	float MaxHealth;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+	float Health;
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual float TakeDamage(
+		float DamageAmount,
+		struct FDamageEvent const& DamageEvent,
+		AController* EventInstugator,
+		AActor* DamageCauser) override;
 
 	UFUNCTION()
 	void Move(const FInputActionValue& value);
@@ -43,4 +51,11 @@ protected:
 	void StartSprint(const FInputActionValue& value);
 	UFUNCTION()
 	void StopSprint(const FInputActionValue& value);
+
+	void OnDeath();
+
+private:
+	float NormalSpeed; // 기본 걷기 속도
+	float SprintSpeedMultiplier; // 몇 배 빠르게 달릴지 결정하는 배수
+	float SprintSpeed; // 실제 스트린트 속도
 };

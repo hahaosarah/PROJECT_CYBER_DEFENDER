@@ -25,7 +25,9 @@ struct FInputActionValue;
 	DECLARE_FUNCTION(execLook); \
 	DECLARE_FUNCTION(execStopJump); \
 	DECLARE_FUNCTION(execStartJump); \
-	DECLARE_FUNCTION(execMove);
+	DECLARE_FUNCTION(execMove); \
+	DECLARE_FUNCTION(execAddHealth); \
+	DECLARE_FUNCTION(execGetHealth);
 
 
 CYBERDEFENDER_API UClass* Z_Construct_UClass_ACyberCharacter_NoRegister();

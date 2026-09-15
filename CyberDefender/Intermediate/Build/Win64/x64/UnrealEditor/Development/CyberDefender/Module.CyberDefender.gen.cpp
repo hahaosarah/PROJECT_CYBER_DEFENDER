@@ -3,6 +3,7 @@
 #include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/BTTask_FindPlayer.gen.cpp"
 #include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/CyberAICharacter.gen.cpp"
 #include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/CyberAIController.gen.cpp"
-#include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/CyberCharacter.gen.cpp"
+#include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/CyberEnemySpawnVolume.gen.cpp"
 #include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/CyberGameMode.gen.cpp"
 #include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/CyberPlayerController.gen.cpp"
+#include "C:/git/PROJECT_CYBER_DEFENDER/CyberDefender/Intermediate/Build/Win64/UnrealEditor/Inc/CyberDefender/UHT/DT_EnemySpawn.gen.cpp"

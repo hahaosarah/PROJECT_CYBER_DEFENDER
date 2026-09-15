@@ -21,7 +21,13 @@ ACyberCharacter::ACyberCharacter()
 	NormalSpeed = 600.f;
 	SprintSpeedMultiplier = 2.f;
 	SprintSpeed = NormalSpeed * SprintSpeedMultiplier;
+
+	GetCharacterMovement()->MaxWalkSpeed = NormalSpeed;
+
+	MaxHealth = 100.0f;
+	Health = MaxHealth;
 }
+
 
 void ACyberCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
@@ -109,4 +115,35 @@ void ACyberCharacter::StopSprint(const FInputActionValue& value)
 	{
 		GetCharacterMovement()->MaxWalkSpeed = NormalSpeed;
 	}
+}
+
+float ACyberCharacter::GetHealth() const
+{
+	return Health;
+}
+
+void ACyberCharacter::AddHealth(float Amount)
+{
+	Health = FMath::Clamp(Health + Amount, 0.0f, MaxHealth);
+	UE_LOG(LogTemp, Warning, TEXT("Health increased to: %f"), Health);
+}
+
+float ACyberCharacter::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstugator, AActor* DamageCauser)
+{
+	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstugator, DamageCauser);
+
+	Health = FMath::Clamp(Health - DamageAmount, 0.0f, MaxHealth);
+	UE_LOG(LogTemp, Warning, TEXT("Health decreased to: %f"), Health);
+
+	if (Health <= 0.0f)
+	{
+		OnDeath();
+	}
+
+	return ActualDamage;
+}
+
+void ACyberCharacter::OnDeath()
+{
+	// 게임 종료 로직
 }
