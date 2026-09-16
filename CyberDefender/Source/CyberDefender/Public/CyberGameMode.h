@@ -11,4 +11,10 @@ class CYBERDEFENDER_API ACyberGameMode : public AGameMode
 	
 public:
 	ACyberGameMode();
+
+	void AddScore(int32 Amount);
+	void SetWave(int32 Wave);
+
+	void GameWin();
+	void GameLose();
 };

@@ -132,7 +132,7 @@ float ACyberCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Damage
 {
 	float ActualDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstugator, DamageCauser);
 
-	Health = FMath::Clamp(Health - DamageAmount, 0.0f, MaxHealth);
+	Health = FMath::Clamp(Health - ActualDamage, 0.0f, MaxHealth);
 	UE_LOG(LogTemp, Warning, TEXT("Health decreased to: %f"), Health);
 
 	if (Health <= 0.0f)

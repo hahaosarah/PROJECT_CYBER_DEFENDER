@@ -43,5 +43,49 @@ void ACyberAICharacter::BeginPlay()
 	Super::BeginPlay();
 	SetMovementSpeed(100);
 
-	UE_LOG(LogTemp, Warning, TEXT("[Sparta] AI character has been spawned."));
+	UE_LOG(LogTemp, Warning, TEXT("[Cyber] AI character has been spawned."));
+}
+
+float ACyberAICharacter::GetHealth() const
+{
+	return Health;
+}
+
+float ACyberAICharacter::TakeDamage(
+	float DamageAmount,
+	FDamageEvent const& DamageEvent,
+	AController* EventInstigator,
+	AActor* DamageCauser)
+{
+	float ActualDamage = Super::TakeDamage(
+		DamageAmount,
+		DamageEvent,
+		EventInstigator,
+		DamageCauser);
+
+	Health = FMath::Clamp(
+		Health - ActualDamage,
+		0.0f,
+		MaxHealth);
+
+	UE_LOG(
+		LogTemp,
+		Warning,
+		TEXT("[AI] Health: %f"),
+		Health);
+
+	if (Health <= 0.0f)
+	{
+		OnDeath();
+	}
+
+	return ActualDamage;
+}
+
+void ACyberAICharacter::OnDeath()
+{
+	UE_LOG(
+		LogTemp,
+		Warning,
+		TEXT("[AI] AI has died."));
 }

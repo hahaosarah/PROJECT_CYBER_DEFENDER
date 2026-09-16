@@ -80,9 +80,56 @@ UEnum* Z_Construct_UEnum_CyberDefender_ERobotType()
 }
 // ********** End Enum ERobotType ******************************************************************
 
+// ********** Begin Class ACyberAICharacter Function GetHealth *************************************
+struct Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics
+{
+	struct CyberAICharacter_eventGetHealth_Parms
+	{
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "Public/CyberAICharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(CyberAICharacter_eventGetHealth_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_ACyberAICharacter, nullptr, "GetHealth", Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::PropPointers), sizeof(Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::CyberAICharacter_eventGetHealth_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::Function_MetaDataParams), Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::CyberAICharacter_eventGetHealth_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ACyberAICharacter_GetHealth()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ACyberAICharacter_GetHealth_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ACyberAICharacter::execGetHealth)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetHealth();
+	P_NATIVE_END;
+}
+// ********** End Class ACyberAICharacter Function GetHealth ***************************************
+
 // ********** Begin Class ACyberAICharacter ********************************************************
 void ACyberAICharacter::StaticRegisterNativesACyberAICharacter()
 {
+	UClass* Class = ACyberAICharacter::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "GetHealth", &ACyberAICharacter::execGetHealth },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 FClassRegistrationInfo Z_Registration_Info_UClass_ACyberAICharacter;
 UClass* ACyberAICharacter::GetPrivateStaticClass()
@@ -137,6 +184,14 @@ struct Z_Construct_UClass_ACyberAICharacter_Statics
 		{ "Category", "CyberAICharacter" },
 		{ "ModuleRelativePath", "Public/CyberAICharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MaxHealth_MetaData[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "Public/CyberAICharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "Public/CyberAICharacter.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
@@ -146,8 +201,14 @@ struct Z_Construct_UClass_ACyberAICharacter_Statics
 	static const UECodeGen_Private::FBytePropertyParams NewProp_RobotMeshes_Key_KeyProp_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_RobotMeshes_Key_KeyProp;
 	static const UECodeGen_Private::FMapPropertyParams NewProp_RobotMeshes;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Health;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ACyberAICharacter_GetHealth, "GetHealth" }, // 151112120
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ACyberAICharacter>::IsAbstract,
 	};
@@ -161,6 +222,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ACyberAICharac
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RobotMeshes_Key_KeyProp_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RobotMeshes_Key_KeyProp = { "RobotMeshes_Key", nullptr, (EPropertyFlags)0x0000000000000001, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UEnum_CyberDefender_ERobotType, METADATA_PARAMS(0, nullptr) }; // 2010056094
 const UECodeGen_Private::FMapPropertyParams Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RobotMeshes = { "RobotMeshes", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Map, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACyberAICharacter, RobotMeshes), EMapPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RobotMeshes_MetaData), NewProp_RobotMeshes_MetaData) }; // 2010056094
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACyberAICharacter, MaxHealth), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MaxHealth_MetaData), NewProp_MaxHealth_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ACyberAICharacter, Health), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACyberAICharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_WalkSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RunSpeed,
@@ -170,6 +233,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ACyberAIC
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RobotMeshes_Key_KeyProp_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RobotMeshes_Key_KeyProp,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_RobotMeshes,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_MaxHealth,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ACyberAICharacter_Statics::NewProp_Health,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ACyberAICharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ACyberAICharacter_Statics::DependentSingletons[])() = {
@@ -182,11 +247,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ACyberAICharacter_Stati
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ACyberAICharacter_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ACyberAICharacter_Statics::PropPointers),
 	0,
 	0x009001A4u,
@@ -211,10 +276,10 @@ struct Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source
 		{ ERobotType_StaticEnum, TEXT("ERobotType"), &Z_Registration_Info_UEnum_ERobotType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2010056094U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ACyberAICharacter, ACyberAICharacter::StaticClass, TEXT("ACyberAICharacter"), &Z_Registration_Info_UClass_ACyberAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACyberAICharacter), 1709781127U) },
+		{ Z_Construct_UClass_ACyberAICharacter, ACyberAICharacter::StaticClass, TEXT("ACyberAICharacter"), &Z_Registration_Info_UClass_ACyberAICharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ACyberAICharacter), 2543622111U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h__Script_CyberDefender_3590855292(TEXT("/Script/CyberDefender"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h__Script_CyberDefender_3531606957(TEXT("/Script/CyberDefender"),
 	Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h__Script_CyberDefender_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h__Script_CyberDefender_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h__Script_CyberDefender_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h__Script_CyberDefender_Statics::EnumInfo));

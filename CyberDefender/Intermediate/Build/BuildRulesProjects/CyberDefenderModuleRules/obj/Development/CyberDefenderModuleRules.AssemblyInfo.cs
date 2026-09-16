@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyberDefenderModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d3d33e74faa7d44d285e2a3dd8c9b824ccca6b0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90e24e1837a8584a2e8244cc6c99eff7fb40dfcc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyberDefenderModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyberDefenderModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

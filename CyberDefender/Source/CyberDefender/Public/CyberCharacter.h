@@ -51,6 +51,7 @@ protected:
 	void StartSprint(const FInputActionValue& value);
 	UFUNCTION()
 	void StopSprint(const FInputActionValue& value);
+	
 
 	void OnDeath();
 

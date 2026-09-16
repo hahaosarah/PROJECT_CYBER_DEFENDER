@@ -283,6 +283,9 @@
     <ClCompile Include="..\..\Source\CyberDefender\Private\CyberGameMode.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\CyberDefender\Private\CyberGameState.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\CyberDefender\Private\CyberPlayerController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -296,6 +299,7 @@
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberCharacter.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberEnemySpawnVolume.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberGameMode.h"/>
+    <ClInclude Include="..\..\Source\CyberDefender\Public\CyberGameState.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberPlayerController.h"/>
     <ClInclude Include="..\..\Source\CyberDefender\Public\DT_EnemySpawn.h"/>
   </ItemGroup>

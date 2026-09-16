@@ -63,6 +63,9 @@
     <ClCompile Include="..\..\Source\CyberDefender\Private\CyberGameMode.cpp">
       <Filter>Source\CyberDefender\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\CyberDefender\Private\CyberGameState.cpp">
+      <Filter>Source\CyberDefender\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\CyberDefender\Private\CyberPlayerController.cpp">
       <Filter>Source\CyberDefender\Private</Filter>
     </ClCompile>
@@ -91,6 +94,9 @@
       <Filter>Source\CyberDefender\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberGameMode.h">
+      <Filter>Source\CyberDefender\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\CyberDefender\Public\CyberGameState.h">
       <Filter>Source\CyberDefender\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\CyberDefender\Public\CyberPlayerController.h">

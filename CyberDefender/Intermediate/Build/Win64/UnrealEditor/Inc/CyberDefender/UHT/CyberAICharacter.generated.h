@@ -17,6 +17,10 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class ACyberAICharacter ********************************************************
+#define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetHealth);
+
+
 CYBERDEFENDER_API UClass* Z_Construct_UClass_ACyberAICharacter_NoRegister();
 
 #define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h_19_INCLASS_NO_PURE_DECLS \
@@ -44,6 +48,7 @@ public: \
 #define FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h_19_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h_19_INCLASS_NO_PURE_DECLS \
 	FID_git_PROJECT_CYBER_DEFENDER_CyberDefender_Source_CyberDefender_Public_CyberAICharacter_h_19_ENHANCED_CONSTRUCTORS \
 private: \
